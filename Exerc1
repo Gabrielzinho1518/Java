@@ -1,0 +1,28 @@
+package exerc1;
+
+import java.util.Scanner;
+
+public class exerc1 {
+    public static void main(String[] args) {
+        // Criar um vetor para armazenar 5 nomes
+        String[] nomes = new String[5];
+        
+        // Criar um objeto Scanner para ler a entrada do usuário
+        Scanner scanner = new Scanner(System.in);
+        
+        // Ler os 5 nomes
+        for (int i = 0; i < 5; i++) {
+            System.out.print("Digite o nome da pessoa " + (i + 1) + ": ");
+            nomes[i] = scanner.nextLine();
+        }
+        
+        // Imprimir os nomes
+        System.out.println("\nOs nomes digitados foram:");
+        for (int i = 0; i < 5; i++) {
+            System.out.println(nomes[i]);
+        }
+        
+        // Fechar o scanner
+        scanner.close();
+    }
+}

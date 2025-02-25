@@ -1,0 +1,32 @@
+package exerc3;
+
+import java.util.Scanner;
+
+public class exerc3 {
+    public static void main(String[] args) {
+        // Criar um vetor para armazenar as notas dos 5 alunos
+        double[] notas = new double[5];
+        
+        // Criar um objeto Scanner para ler a entrada do usuário
+        Scanner scanner = new Scanner(System.in);
+        
+        // Variável para armazenar a soma das notas
+        double soma = 0;
+        
+        // Ler as 5 notas
+        for (int i = 0; i < 5; i++) {
+            System.out.print("Digite a nota do aluno " + (i + 1) + ": ");
+            notas[i] = scanner.nextDouble();
+            soma += notas[i];  // Adiciona a nota à soma total
+        }
+        
+        // Calcular a média das notas
+        double media = soma / 5;
+        
+        // Imprimir a média das notas
+        System.out.println("\nA média das notas é: " + media);
+        
+        // Fechar o scanner
+        scanner.close();
+    }
+}

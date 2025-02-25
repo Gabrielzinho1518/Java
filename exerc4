@@ -1,0 +1,46 @@
+package exerc4;
+
+import java.util.Scanner;
+
+public class exerc4 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Vetor fixo de tamanho 5
+        int[] vetor = new int[5];
+        for (int i = 0; i < 5; i++) {
+            System.out.print("Digite o elemento " + i + ": ");
+            vetor[i] = sc.nextInt();
+        }
+
+        // Criando vetor dinâmico
+        System.out.print("Digite o tamanho do vetor dinâmico: ");
+        int tam = sc.nextInt();
+        int[] vetorDinamico = new int[tam];
+        
+        for (int i = 0; i < tam; i++) {
+            System.out.print("Digite o elemento " + i + ": ");
+            vetorDinamico[i] = sc.nextInt();
+        }
+
+        // Exibindo os valores do vetor dinâmico
+        System.out.println("Elementos do vetor dinâmico:");
+        for (int i = 0; i < tam; i++) {
+            System.out.println("Elemento " + i + ": " + vetorDinamico[i]);
+        }
+        
+        // Vetor de nomes
+        String[] nomes = new String[10];
+        nomes[0] = "Ricardo";
+        nomes[1] = "Gabriel";
+        
+        System.out.println("Nomes armazenados:");
+        for (int i = 0; i < 10; i++) {
+            if (nomes[i] != null) {
+                System.out.println("Nome " + i + ": " + nomes[i]);
+            }
+        }
+        
+        sc.close();
+    }
+}

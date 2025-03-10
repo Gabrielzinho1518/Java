@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Multiplos {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        // Entrada de dados
+        System.out.print("Digite o primeiro valor: ");
+        int a = sc.nextInt();
+        
+        System.out.print("Digite o segundo valor: ");
+        int b = sc.nextInt();
+        
+        // Verificar se são múltiplos
+        if (a % b == 0 || b % a == 0) {
+            System.out.println("Os valores são múltiplos um do outro.");
+        } else {
+            System.out.println("Os valores não são múltiplos um do outro.");
+        }
+        
+        sc.close();
+    }
+}

@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class MaiorValor {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        // Entrada de dados
+        System.out.print("Digite o primeiro valor: ");
+        int a = sc.nextInt();
+        
+        System.out.print("Digite o segundo valor: ");
+        int b = sc.nextInt();
+        
+        System.out.print("Digite o terceiro valor: ");
+        int c = sc.nextInt();
+        
+        // Determinar o maior valor
+        int maior = Math.max(a, Math.max(b, c));
+        
+        // Exibir resultado
+        System.out.println("O maior valor é: " + maior);
+        
+        sc.close();
+    }
+}

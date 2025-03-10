@@ -1,0 +1,30 @@
+import java.util.Scanner;
+import java.util.Arrays;
+
+public class MaiorValor {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        // Entrada de dados
+        int[] valores = new int[3];
+        System.out.print("Digite o primeiro valor: ");
+        valores[0] = sc.nextInt();
+        
+        System.out.print("Digite o segundo valor: ");
+        valores[1] = sc.nextInt();
+        
+        System.out.print("Digite o terceiro valor: ");
+        valores[2] = sc.nextInt();
+        
+        // Ordenar valores
+        Arrays.sort(valores);
+        
+        // Exibir valores em ordem crescente
+        System.out.println("Valores em ordem crescente: " + valores[0] + ", " + valores[1] + ", " + valores[2]);
+        
+        // Exibir o maior valor
+        System.out.println("O maior valor é: " + valores[2]);
+        
+        sc.close();
+    }
+}

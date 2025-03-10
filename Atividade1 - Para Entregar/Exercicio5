@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class QuadrantePonto {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        // Entrada de dados
+        System.out.print("Digite a coordenada X: ");
+        int x = sc.nextInt();
+        
+        System.out.print("Digite a coordenada Y: ");
+        int y = sc.nextInt();
+        
+        // Determinar o quadrante
+        if (x == 0 && y == 0) {
+            System.out.println("O ponto está na origem.");
+        } else if (x == 0) {
+            System.out.println("O ponto está sobre o eixo Y.");
+        } else if (y == 0) {
+            System.out.println("O ponto está sobre o eixo X.");
+        } else if (x > 0 && y > 0) {
+            System.out.println("O ponto está no primeiro quadrante.");
+        } else if (x < 0 && y > 0) {
+            System.out.println("O ponto está no segundo quadrante.");
+        } else if (x < 0 && y < 0) {
+            System.out.println("O ponto está no terceiro quadrante.");
+        } else {
+            System.out.println("O ponto está no quarto quadrante.");
+        }
+        
+        sc.close();
+    }
+}

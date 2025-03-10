@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class SituacaoEleitor {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        // Entrada de dados
+        System.out.print("Digite a idade: ");
+        int idade = sc.nextInt();
+        
+        // Verificar situação do eleitor
+        if (idade < 16) {
+            System.out.println("Não está apto a votar.");
+        } else if ((idade >= 16 && idade < 18) || idade > 70) {
+            System.out.println("Voto facultativo.");
+        } else {
+            System.out.println("Voto obrigatório.");
+        }
+        
+        sc.close();
+    }
+}
+

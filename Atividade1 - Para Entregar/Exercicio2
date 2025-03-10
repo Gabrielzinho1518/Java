@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class TaxiRendimento {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Entrada de dados
+        System.out.print("Marcação do odômetro no início do dia (km): ");
+        double inicio = sc.nextDouble();
+        
+        System.out.print("Marcação do odômetro no final do dia (km): ");
+        double fim = sc.nextDouble();
+        
+        System.out.print("Litros de combustível gastos: ");
+        double litros = sc.nextDouble();
+        
+        System.out.print("Valor total recebido dos passageiros (R$): ");
+        double receita = sc.nextDouble();
+        
+        // Cálculos
+        double kmRodados = fim - inicio;
+        double consumoMedio = kmRodados / litros;
+        double custoCombustivel = litros * 4.90;
+        double lucroLiquido = receita - custoCombustivel;
+        
+        // Saída de resultados
+        System.out.printf("Média de consumo: %.2f km/l\n", consumoMedio);
+        System.out.printf("Lucro líquido do dia: R$ %.2f\n", lucroLiquido);
+        
+        sc.close();
+    }
+}
